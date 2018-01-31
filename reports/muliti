@@ -1,0 +1,83 @@
+                                           ___Python Multiple Inheritance wthit using superkey word___   
+
+
+class First(object):
+  def __init__(self, a):
+    print "first", a
+    super(First, self).__init__(20)
+
+class Second(object):
+  def __init__(self, a):
+    print "second", a
+    super(Second, self).__init__()
+
+class Third(First, Second):
+  def __init__(self):
+    super(Third, self).__init__(10)
+    print "that's it"
+
+t = Third()
+
+out put :
+
+     first 10
+     second 20
+      that's it
+__________
+
+
+class Third(First, Second):
+
+In this example, Third() will call First.__init__. Python looks for each attribute in the class's parents as they are listed left to right. In this case we are looking for __init__. So, if you define
+    
+
+Python will start by looking at First, and, if First doesn't have the attribute, then it will look at Second                      
+
+
+
+
+
+
+
+________________________________________________________________________________________________________________________________________________
+
+                                                     ____this wthout using super keyWord___ 
+
+class a:
+    def __init__(self):
+        print("this a")
+
+
+
+
+
+class b:
+    def __init__(self):
+        
+        print("this is b")
+
+
+
+class c(a,b):
+    def __init__(self):
+        b.__init__(self)
+        a.__init__(self)
+        print("this is c")
+
+
+
+
+
+the output:
+           m=c();
+            this is b
+            this a
+             this is c
+       
+
+
+
+
+
+
+

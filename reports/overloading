@@ -1,0 +1,31 @@
+
+
+
+
+
+_there isnot overloading in Python, it is not possible to create overloaded methods the same way as in Java.
+
+However, you can create methods with optional and/or keyword-based arguments and process those accordingly. Here's an example: 
+
+
+
+class A:
+    def first(self, f=None):
+        if f is not None:
+            print ('first met', f)
+        else:
+            print ('first method')
+
+
+
+a = A()
+a.first()
+a.first('something')
+
+
+the output:
+
+           first method 
+           first met something
+ 
+
